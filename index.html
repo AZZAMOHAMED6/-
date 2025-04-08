@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سوق عبيد</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      text-align: center;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+    }
+    .product {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: inline-block;
+      margin: 20px;
+      padding: 20px;
+      width: 250px;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .buy-btn {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #ff4444;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .buy-btn:hover {
+      background-color: #cc0000;
+    }
+    #popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      font-size: 2rem;
+      z-index: 999;
+    }
+    #popup img {
+      width: 300px;
+      max-width: 90%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>مرحباً بك في سوق العبيدة</h1>
+    <p>موقع لضحك متديهاش سيريوا🙃</p>
+  </header>
+
+  <div class="product">
+    <img src="FhYxwuvWYAEWPo3.jpg" alt="شخص رقم 1">
+    <h2>العبد 001</h2>
+    <p>السعر: 100$</p>
+    <button class="buy-btn" onclick="showPopup()">شراء</button>
+  </div>
+
+  <div class="product">
+    <img src="723706.jpeg.webp" alt="شخص رقم 2">
+    <h2>العبد 002</h2>
+    <p>السعر: 149$ (خصم 50%)</p>
+    <button class="buy-btn" onclick="showPopup()">شراء</button>
+  </div>
+
+  <div id="popup">
+    <img src="sddefault.jpg" alt="ذا روك">
+    <div>احشم خونا احشم</div>
+  </div>
+
+  <script>
+    function showPopup() {
+      document.getElementById('popup').style.display = 'flex';
+      setTimeout(() => {
+        document.getElementById('popup').style.display = 'none';
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
